@@ -1,7 +1,5 @@
 package com.hartley.peter.day2;
 
-import com.hartley.peter.day1.Day1;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,12 +17,13 @@ public class Day2 {
     };
 
     public static void main(String[] args) throws IOException {
+        InputStream inputStream = Day2.class.getResourceAsStream("/day2");
+        InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
+        BufferedReader reader = new BufferedReader(streamReader);
+
         int part1Result = 0;
         int part2Result = 0;
 
-        InputStream inputStream = Day1.class.getResourceAsStream("/day2");
-        InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
-        BufferedReader reader = new BufferedReader(streamReader);
         for (String line; (line = reader.readLine()) != null;) {
             Game game = Game.parse(line);
 

@@ -9,11 +9,12 @@ import java.nio.charset.StandardCharsets;
 public class Day1b {
 
     public static void main(String[] args) throws IOException {
-        int result = 0;
-
         InputStream inputStream = Day1.class.getResourceAsStream("/day1");
         InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
         BufferedReader reader = new BufferedReader(streamReader);
+
+        int result = 0;
+
         for (String line; (line = reader.readLine()) != null;) {
             result += getCalibrationValue(line);;
         }
