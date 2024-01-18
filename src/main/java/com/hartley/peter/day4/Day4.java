@@ -1,22 +1,13 @@
 package com.hartley.peter.day4;
 
-import com.hartley.peter.day3.Day3;
+import com.hartley.peter.InputReader;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Day4 {
 
     public static void main(String[] args) throws IOException {
-        InputStream inputStream = Day4.class.getResourceAsStream("/day4");
-        InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
-        BufferedReader reader = new BufferedReader(streamReader);
+        InputReader reader = new InputReader("/day4");
 
         long points = 0;
 

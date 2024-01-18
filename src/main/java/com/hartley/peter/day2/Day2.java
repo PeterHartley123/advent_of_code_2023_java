@@ -1,10 +1,8 @@
 package com.hartley.peter.day2;
 
-import java.io.BufferedReader;
+import com.hartley.peter.InputReader;
+
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 
 public class Day2 {
 
@@ -17,9 +15,7 @@ public class Day2 {
     };
 
     public static void main(String[] args) throws IOException {
-        InputStream inputStream = Day2.class.getResourceAsStream("/day2");
-        InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
-        BufferedReader reader = new BufferedReader(streamReader);
+        InputReader reader = new InputReader("/day2");
 
         int part1Result = 0;
         int part2Result = 0;

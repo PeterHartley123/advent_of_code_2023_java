@@ -1,19 +1,15 @@
 package com.hartley.peter.day3;
 
-import java.io.BufferedReader;
+import com.hartley.peter.InputReader;
+
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Day3 {
 
     public static void main(String[] args) throws IOException {
-        InputStream inputStream = Day3.class.getResourceAsStream("/day3");
-        InputStreamReader streamReader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
-        BufferedReader reader = new BufferedReader(streamReader);
+        InputReader reader = new InputReader("/day3");
 
         List<String[]> matrixCollector = new ArrayList<>();
 
@@ -28,8 +24,8 @@ public class Day3 {
         System.out.println("Sum = " + sum);
 
         List<Integer> gears = processMatrixPartb(matrix);
-        Integer sumpartb = gears.stream().reduce(0, Integer::sum);
-        System.out.println("Sum part b= " + sumpartb);
+        Integer sumPartB = gears.stream().reduce(0, Integer::sum);
+        System.out.println("Sum part b= " + sumPartB);
     }
 
     private static List<Integer> processMatrix(String[][] matrix) {
