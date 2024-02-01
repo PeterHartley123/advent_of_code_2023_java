@@ -4,7 +4,6 @@ import com.hartley.peter.InputReader;
 
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.stream.IntStream;
 import java.util.stream.LongStream;
 
 public class Day6 {

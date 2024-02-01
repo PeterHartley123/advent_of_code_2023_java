@@ -7,8 +7,6 @@ import java.util.*;
 
 public class Day5 {
 
-    private static final boolean IS_PART_A = false;
-
     public static void main(String[] args) throws IOException {
         InputReader reader = new InputReader("/day5");
 
